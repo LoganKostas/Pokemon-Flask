@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST">
+  {{ form.hidden_tag() }}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+         <div class="input-group">
+            {{ form.name(class="form-control rounded", placeholder="Search") }}
+            {{ form.submit(class="btn btn-outline-primary") }}
+          </div>
+      </div>
+      <div class="col-sm">
+      </div>
+    </div>
+  </div>
+ 
+
+</form>
+<div class="card mx-auto" style="width: 18rem;">
+  <img src="{{ pokemon['img'] }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ pokemon['name'] }}</h5>
+    <p class="card-text">
+        <ul>
+          <li>Ability:{{ pokemon['ability'] }}</li>
+          <li>HP:{{ pokemon['hp'] }}</li>
+          <li>Attack:{{ pokemon['attack'] }}</li>
+          <li>Defense:{{ pokemon['defense'] }}</li>
+        </ul>
+      </p>
+  </div>
+</div>
+
+
+
+
+{% endblock %} 
+
+
+    <!-- <div class="input-group">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary">search</button>
+    </div> -->
+
+  
+<!-- <div class="card mx-auto" style="width: 18rem;">
+  <img src="{{ pokemon['img'] }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{pokemon['name'].title()}}</h5>
+    <p class="card-text">
+      <ul>
+        <li>Ability:{{ pokemon['ability'] }}</li>
+        <li>HP:{{ pokemon['hp'] }}</li>
+        <li>Attack:{{ pokemon['attack'] }}</li>
+        <li>Defense:{{ pokemon['defense'] }}</li>
+      </ul>
+    </p>
+  </div>
+</div> -->
+
+<!-- <form method='POST'>
+    {{ form.hidden_tag() }}
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <!-- One of three columns -->
+        <!-- </div> -->
+        <!-- <div class="col-sm"> -->
+          <!-- <div class="input-group"> -->
+            <!-- {{ form.name(class="form-control rounded", placeholder="Search") }} -->
+            <!-- <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" /> -->
+            <!-- {{ form.submit(class="btn btn-outline-primary") }} -->
+            <!-- <button type="button" class="btn btn-outline-primary">search</button> -->
+        <!-- </div>
+        </div>
+        <div class="col-sm"> -->
+          <!-- One of three columns -->
+        <!-- </div>
+      </div>
+    </div>
+</form> --> -->
